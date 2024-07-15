@@ -21,6 +21,8 @@ type TpessoascomTotalCount = {
   totalcount: number;
 };
 
+const contagem = () => {};
+
 //a resposta do nosso getall seria uma lista de pessoas e a quantidade total
 const getAll = async (
   page = 1,
