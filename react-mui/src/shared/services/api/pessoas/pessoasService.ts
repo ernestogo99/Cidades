@@ -1,14 +1,14 @@
 import { Enviroment } from "../../../environment";
 import { api } from "../axios-config";
 
-interface Ilistagempessoa {
+export interface Ilistagempessoa {
   id: number;
   nomeCompleto: string;
   email: string;
   cidadeId: number; // representa o relaciomento da cidade e da pessoa
 }
 
-interface Idetalhepessoa {
+export interface Idetalhepessoa {
   id: number;
   nomeCompleto: string;
   email: string;
@@ -88,7 +88,6 @@ const updateByid = async (
 ): Promise<void | Error> => {
   try {
     await api.put<Idetalhepessoa>(`/pessoas/${id}`, dados);
-    return new Error("erro ao editar o registro");
   } catch (error) {
     console.error(error);
     return new Error(
@@ -99,7 +98,6 @@ const updateByid = async (
 const deleteByid = async (id: number): Promise<any> => {
   try {
     await api.delete<Idetalhepessoa>(`/pessoas/${id}`);
-    return new Error("erro ao apagar o registro");
   } catch (error) {
     console.error(error);
     return new Error(

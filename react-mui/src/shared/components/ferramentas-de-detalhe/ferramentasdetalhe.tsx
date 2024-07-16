@@ -148,6 +148,7 @@ export const Ferramentasdedetalhe: React.FC<Iferramentasdedetalhe> = ({
         <>
           <Divider variant="middle" orientation="vertical"></Divider>
           <Button
+            onClick={aoclicaremvoltar}
             color="primary"
             variant="outlined"
             disableElevation
